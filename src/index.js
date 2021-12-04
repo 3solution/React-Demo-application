@@ -10,8 +10,18 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+function formatName(user){
+  return user.firstname + user.lastname;
+}
+const name = {
+  firstname : 'Evil',
+  lastname : 'Dev'
+};
+const element = (
+  <h1>Hello {formatName(name)}</h1>
+);
 ReactDOM.render(
-  <h1>Hello, Evil!</h1>,
+  element,
   document.getElementById('root1')
 );
 
